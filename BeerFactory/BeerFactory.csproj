@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D42AADC-5A0A-40A0-ADBA-70532BFC5A05}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BeerFactory</RootNamespace>
+    <AssemblyName>BeerFactory</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminEmpStatuses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminEmpStatuses.Designer.cs">
+      <DependentUpon>AdminEmpStatuses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPurchOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPurchOrdersForm.Designer.cs">
+      <DependentUpon>AdminPurchOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\editOrderStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\editOrderStatus.Designer.cs">
+      <DependentUpon>editOrderStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EmpControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\EmpControl.Designer.cs">
+      <DependentUpon>EmpControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EmpInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\EmpInfo.Designer.cs">
+      <DependentUpon>EmpInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NewAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\NewAcc.Designer.cs">
+      <DependentUpon>NewAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PurchControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\PurchControl.Designer.cs">
+      <DependentUpon>PurchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\empForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\empForm.Designer.cs">
+      <DependentUpon>empForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\empProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\empProfile.Designer.cs">
+      <DependentUpon>empProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\empStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\empStatus.Designer.cs">
+      <DependentUpon>empStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPurchAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPurchAcc.Designer.cs">
+      <DependentUpon>NewPurchAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchaser\pOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchaser\pOrders.Designer.cs">
+      <DependentUpon>pOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchaser\productInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchaser\productInfo.Designer.cs">
+      <DependentUpon>productInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchaser\PurchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchaser\PurchForm.Designer.cs">
+      <DependentUpon>PurchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchaser\purchMakeOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchaser\purchMakeOrder.Designer.cs">
+      <DependentUpon>purchMakeOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupportFuncs\StoredProcedures.cs" />
+    <EmbeddedResource Include="Admin\AdminEmpStatuses.resx">
+      <DependentUpon>AdminEmpStatuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminPurchOrdersForm.resx">
+      <DependentUpon>AdminPurchOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\editOrderStatus.resx">
+      <DependentUpon>editOrderStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\EmpControl.resx">
+      <DependentUpon>EmpControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\EmpInfo.resx">
+      <DependentUpon>EmpInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\NewAcc.resx">
+      <DependentUpon>NewAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\PurchControl.resx">
+      <DependentUpon>PurchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\empForm.resx">
+      <DependentUpon>empForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\empProfile.resx">
+      <DependentUpon>empProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\empStatus.resx">
+      <DependentUpon>empStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPurchAcc.resx">
+      <DependentUpon>NewPurchAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchaser\pOrders.resx">
+      <DependentUpon>pOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchaser\productInfo.resx">
+      <DependentUpon>productInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Purchaser\PurchForm.resx">
+      <DependentUpon>PurchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchaser\purchMakeOrder.resx">
+      <DependentUpon>purchMakeOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
